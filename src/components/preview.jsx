@@ -6,7 +6,6 @@ let Preview = () => {
 		useSelector((state) => state.details);
 
 	let templateCode = useSelector((state) => state.template);
-	console.log(templateCode);
 
 	return (
 		<>
