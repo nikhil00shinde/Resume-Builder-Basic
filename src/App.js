@@ -5,6 +5,7 @@ import Home from "./components/home";
 import Login from "./components/login";
 import Navbar from "./components/navbar";
 import PersonalData from "./components/personalData";
+import Qualification from "./components/qualifications";
 import SignUp from "./components/signup";
 import { auth, firestore } from "./firebase";
 import { userCreator } from "./redux/actions/userActions";
@@ -31,11 +32,15 @@ let App = () => {
 			unsub();
 		};
 	}, []);
+
 	return (
 		<>
 			<Router>
 				<Navbar />
 				<Switch>
+					<Route path="/qualifications">
+						<Qualification />
+					</Route>
 					<Route path="/personal">
 						<PersonalData />
 					</Route>
